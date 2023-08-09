@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @prison.banner_url %>);">
+  <div class="container">
+    <h1><%= @prison.name %></h1>
+    <%= link_to 'Add Criminal', '#', class: 'btn btn-danger mt-2'  %>
+  </div>
+</div>
+<div class="container mt-2">
+  <div class="cards">
+    <% @prison.criminals.each do |criminal| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= criminal.image_url %>)">
+        <%= criminal.name %>
+        <%= link_to criminal_path(criminal), class: 'card-remove-link', data: { turbo_method: :delete, turbo_confirm: "Release #{criminal.name}?" } do %>
+          <i class="fa-solid fa-door-open"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

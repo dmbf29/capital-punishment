@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Register Criminal</h1>
+  <%= simple_form_for [@prison, @criminal] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url %>
+    <%= f.submit 'Register', class: 'btn btn-danger mt-2' %>
+  <% end %>
+</div>
