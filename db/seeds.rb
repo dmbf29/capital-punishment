@@ -20,3 +20,26 @@ puts "Creating criminals..."
     )
   end
 puts "... created #{Criminal.count} criminals"
+
+puts "Creating crimes...."
+crimes = [
+  'theft',
+  'non-payment',
+  'drug trafficking',
+  'public indeciency',
+  'poor indentation',
+  'stalking',
+  'arson',
+  'car theft',
+  'kidnapping',
+  'dropping production DB'
+]
+
+crimes.each do |name|
+  Crime.create!(
+    name: name
+  )
+end
+
+
+puts "... created #{Crime.count} crimes"

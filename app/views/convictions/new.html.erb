@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Add Convinction</h1>
+  <%= simple_form_for [@criminal, @conviction] do |f| %>
+    <%= f.input :date, html5: true %>
+    <%= f.association :crime, collection: @crimes, include_blank: false %>
+    <%= f.submit 'Convict', class: 'btn btn-danger' %>
+  <% end %>
+</div>
