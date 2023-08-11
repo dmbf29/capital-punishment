@@ -44,6 +44,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
+gem "cloudinary"
 gem "sassc-rails"
 gem "simple_form"
 
