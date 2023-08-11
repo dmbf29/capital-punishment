@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.urban.org/sites/default/files/shutterstock_365427041_crop.jpg);">
+  <div class="container">
+    <h1>Capital Punishment 1298</h1>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="cards">
+    <% @prisons.each do |prison| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= prison.banner_url %>)">
+        <%= prison.name %>
+        <%= link_to '', prison_path(prison), class: 'card-category-link'%>
+      </div>
+    <% end %>
+  </div>
+</div>
